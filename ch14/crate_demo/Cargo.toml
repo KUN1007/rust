@@ -1,0 +1,15 @@
+[package]
+name = "crate_demo"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+# 这里的 opt-level 是指 cargo 对代码的优化等级，有三个等级，3 为最高优化等级，耗时也最长
+opt-level = 3
